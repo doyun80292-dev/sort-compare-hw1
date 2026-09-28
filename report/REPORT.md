@@ -2,7 +2,7 @@
 
 - 과목: 고급알고리즘 (SIT2001-01)
 - 학번 / 이름: 2026193225 / 김도윤
-- GitHub: https://github.com/[계정]/[저장소]
+- GitHub: https://github.com/doyun80292-dev/sort-compare-hw1
 - AI 활용: 힙 정렬 학습(부록), 코드 작성과 보고서 정리에 Claude를 사용함
 
 ## 1. 비교한 정렬
