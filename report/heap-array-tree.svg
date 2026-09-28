@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="330" viewBox="0 0 720 330" font-family="-apple-system, 'Noto Sans KR', 'Noto Sans CJK KR', 'Malgun Gothic', sans-serif">
+<rect width="720" height="330" fill="#fbfbf9"/>
+<text x="20" y="28" font-size="16" font-weight="600" fill="#24292f">배열이 곧 트리다 — 수업 예제 배열로 만든 최대 힙</text>
+<text x="20" y="48" font-size="11.5" fill="#6e7781">입력 2 8 5 9 1 10 7 6 4 3 → buildHeap 뒤. 모든 부모가 두 자식보다 크거나 같다(힙 성질)</text>
+<line x1="250.0" y1="78.0" x2="145.0" y2="130.0" stroke="#9aa3ab" stroke-width="1.4"/>
+<line x1="250.0" y1="78.0" x2="355.0" y2="130.0" stroke="#9aa3ab" stroke-width="1.4"/>
+<line x1="145.0" y1="130.0" x2="92.5" y2="182.0" stroke="#9aa3ab" stroke-width="1.4"/>
+<line x1="145.0" y1="130.0" x2="197.5" y2="182.0" stroke="#9aa3ab" stroke-width="1.4"/>
+<line x1="355.0" y1="130.0" x2="302.5" y2="182.0" stroke="#9aa3ab" stroke-width="1.4"/>
+<line x1="355.0" y1="130.0" x2="407.5" y2="182.0" stroke="#9aa3ab" stroke-width="1.4"/>
+<line x1="92.5" y1="182.0" x2="66.2" y2="234.0" stroke="#9aa3ab" stroke-width="1.4"/>
+<line x1="92.5" y1="182.0" x2="118.8" y2="234.0" stroke="#9aa3ab" stroke-width="1.4"/>
+<line x1="197.5" y1="182.0" x2="171.2" y2="234.0" stroke="#9aa3ab" stroke-width="1.4"/>
+<circle cx="250.0" cy="78.0" r="16" fill="#009E73" stroke="#009E73" stroke-width="1.8"/>
+<text x="250.0" y="83.0" font-size="14" font-weight="600" text-anchor="middle" fill="#ffffff">10</text>
+<text x="269.0" y="66.0" font-size="10" fill="#6e7781">[0]</text>
+<circle cx="145.0" cy="130.0" r="16" fill="#ffffff" stroke="#009E73" stroke-width="1.8"/>
+<text x="145.0" y="135.0" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f">9</text>
+<text x="164.0" y="118.0" font-size="10" fill="#6e7781">[1]</text>
+<circle cx="355.0" cy="130.0" r="16" fill="#ffffff" stroke="#009E73" stroke-width="1.8"/>
+<text x="355.0" y="135.0" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f">7</text>
+<text x="374.0" y="118.0" font-size="10" fill="#6e7781">[2]</text>
+<circle cx="92.5" cy="182.0" r="16" fill="#ffffff" stroke="#009E73" stroke-width="1.8"/>
+<text x="92.5" y="187.0" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f">8</text>
+<text x="111.5" y="170.0" font-size="10" fill="#6e7781">[3]</text>
+<circle cx="197.5" cy="182.0" r="16" fill="#ffffff" stroke="#009E73" stroke-width="1.8"/>
+<text x="197.5" y="187.0" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f">3</text>
+<text x="216.5" y="170.0" font-size="10" fill="#6e7781">[4]</text>
+<circle cx="302.5" cy="182.0" r="16" fill="#ffffff" stroke="#009E73" stroke-width="1.8"/>
+<text x="302.5" y="187.0" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f">5</text>
+<text x="321.5" y="170.0" font-size="10" fill="#6e7781">[5]</text>
+<circle cx="407.5" cy="182.0" r="16" fill="#ffffff" stroke="#009E73" stroke-width="1.8"/>
+<text x="407.5" y="187.0" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f">2</text>
+<text x="426.5" y="170.0" font-size="10" fill="#6e7781">[6]</text>
+<circle cx="66.2" cy="234.0" r="16" fill="#ffffff" stroke="#009E73" stroke-width="1.8"/>
+<text x="66.2" y="239.0" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f">6</text>
+<text x="85.2" y="222.0" font-size="10" fill="#6e7781">[7]</text>
+<circle cx="118.8" cy="234.0" r="16" fill="#ffffff" stroke="#009E73" stroke-width="1.8"/>
+<text x="118.8" y="239.0" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f">4</text>
+<text x="137.8" y="222.0" font-size="10" fill="#6e7781">[8]</text>
+<circle cx="171.2" cy="234.0" r="16" fill="#ffffff" stroke="#009E73" stroke-width="1.8"/>
+<text x="171.2" y="239.0" font-size="14" font-weight="600" text-anchor="middle" fill="#24292f">1</text>
+<text x="190.2" y="222.0" font-size="10" fill="#6e7781">[9]</text>
+<text x="40" y="266" font-size="11.5" fill="#6e7781">메모리에 실제로 놓인 모양 (추가 배열 없음)</text>
+<rect x="40" y="280" width="40" height="28" fill="#e6f5ef" stroke="#9aa3ab"/>
+<text x="60.0" y="299" font-size="13" text-anchor="middle" font-weight="600" fill="#24292f">10</text>
+<text x="60.0" y="322" font-size="10" text-anchor="middle" fill="#6e7781">0</text>
+<rect x="82" y="280" width="40" height="28" fill="#ffffff" stroke="#9aa3ab"/>
+<text x="102.0" y="299" font-size="13" text-anchor="middle" font-weight="600" fill="#24292f">9</text>
+<text x="102.0" y="322" font-size="10" text-anchor="middle" fill="#6e7781">1</text>
+<rect x="124" y="280" width="40" height="28" fill="#ffffff" stroke="#9aa3ab"/>
+<text x="144.0" y="299" font-size="13" text-anchor="middle" font-weight="600" fill="#24292f">7</text>
+<text x="144.0" y="322" font-size="10" text-anchor="middle" fill="#6e7781">2</text>
+<rect x="166" y="280" width="40" height="28" fill="#ffffff" stroke="#9aa3ab"/>
+<text x="186.0" y="299" font-size="13" text-anchor="middle" font-weight="600" fill="#24292f">8</text>
+<text x="186.0" y="322" font-size="10" text-anchor="middle" fill="#6e7781">3</text>
+<rect x="208" y="280" width="40" height="28" fill="#ffffff" stroke="#9aa3ab"/>
+<text x="228.0" y="299" font-size="13" text-anchor="middle" font-weight="600" fill="#24292f">3</text>
+<text x="228.0" y="322" font-size="10" text-anchor="middle" fill="#6e7781">4</text>
+<rect x="250" y="280" width="40" height="28" fill="#ffffff" stroke="#9aa3ab"/>
+<text x="270.0" y="299" font-size="13" text-anchor="middle" font-weight="600" fill="#24292f">5</text>
+<text x="270.0" y="322" font-size="10" text-anchor="middle" fill="#6e7781">5</text>
+<rect x="292" y="280" width="40" height="28" fill="#ffffff" stroke="#9aa3ab"/>
+<text x="312.0" y="299" font-size="13" text-anchor="middle" font-weight="600" fill="#24292f">2</text>
+<text x="312.0" y="322" font-size="10" text-anchor="middle" fill="#6e7781">6</text>
+<rect x="334" y="280" width="40" height="28" fill="#ffffff" stroke="#9aa3ab"/>
+<text x="354.0" y="299" font-size="13" text-anchor="middle" font-weight="600" fill="#24292f">6</text>
+<text x="354.0" y="322" font-size="10" text-anchor="middle" fill="#6e7781">7</text>
+<rect x="376" y="280" width="40" height="28" fill="#ffffff" stroke="#9aa3ab"/>
+<text x="396.0" y="299" font-size="13" text-anchor="middle" font-weight="600" fill="#24292f">4</text>
+<text x="396.0" y="322" font-size="10" text-anchor="middle" fill="#6e7781">8</text>
+<rect x="418" y="280" width="40" height="28" fill="#ffffff" stroke="#9aa3ab"/>
+<text x="438.0" y="299" font-size="13" text-anchor="middle" font-weight="600" fill="#24292f">1</text>
+<text x="438.0" y="322" font-size="10" text-anchor="middle" fill="#6e7781">9</text>
+<text x="490" y="84" font-size="12.5" fill="#24292f" font-weight="600">인덱스 규칙 (0부터)</text>
+<text x="490" y="103" font-size="12.5" fill="#24292f" font-weight="400">왼쪽 자식  = 2i + 1</text>
+<text x="490" y="122" font-size="12.5" fill="#24292f" font-weight="400">오른쪽 자식 = 2i + 2</text>
+<text x="490" y="141" font-size="12.5" fill="#24292f" font-weight="400">부모       = (i − 1) / 2</text>
+<text x="490" y="179" font-size="12.5" fill="#24292f" font-weight="600">예) i = 1 (값 9)</text>
+<text x="490" y="198" font-size="12.5" fill="#24292f" font-weight="400">자식 3, 4 → 값 8, 3</text>
+<text x="490" y="217" font-size="12.5" fill="#24292f" font-weight="400">부모 0 → 값 10</text>
+<text x="490" y="255" font-size="12.5" fill="#24292f" font-weight="600">높이 = ⌊log₂ n⌋ = 3</text>
+<text x="490" y="274" font-size="12.5" fill="#24292f" font-weight="400">→ siftDown 한 번 ≤ 3층</text>
+</svg>
